@@ -5,7 +5,6 @@
     CROP:       https://www.remove.bg/
     GRADIENT:   https://cssgradient.io/
  */
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -27,7 +26,6 @@ body {
 }
 
 /* Line */
-
 /* 
 ███╗   ██╗ █████╗ ██╗   ██╗
 ████╗  ██║██╔══██╗██║   ██║
@@ -37,7 +35,6 @@ body {
 ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  
                            
 */
-
 header {
   padding: 10px 0;
   background-color: white;
@@ -100,7 +97,6 @@ nav {
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝╚══════╝
                                                      
 */
-
 .section-profile {
   padding-left: 5px;
   padding-top: 30px;
@@ -198,12 +194,11 @@ nav {
   margin: 0 25px 20px 0;
 }
 
-.user-description>* {
+.user-description > * {
   margin: 0;
 }
 
 /*  */
-
 .grid-item {
   margin: 0;
   padding: 0;
@@ -215,9 +210,9 @@ nav {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(auto, 293px))[3];
-  grid-template-columns: repeat(3, minmax(auto, 293px));
+      grid-template-columns: repeat(3, minmax(auto, 293px));
   -ms-grid-rows: (minmax(auto, 293))[3];
-  grid-template-rows: repeat(3, minmax(auto, 293));
+      grid-template-rows: repeat(3, minmax(auto, 293));
   gap: 5px;
   height: auto;
   -webkit-box-pack: center;
@@ -240,8 +235,9 @@ nav {
   width: 100px;
   margin-right: 20px;
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
 }
 
 .fig-profile-friend img {
@@ -265,7 +261,6 @@ nav {
 ╚═╝     ╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝
                                                      
 */
-
 .line {
   max-width: 900px;
   margin: auto;
@@ -297,7 +292,6 @@ nav {
 }
 
 /* img gallery */
-
 .img-link {
   display: block;
   position: relative;
@@ -325,7 +319,6 @@ nav {
 }
 
 /* likes comments */
-
 .overlay {
   position: absolute;
   bottom: 12%;
@@ -341,7 +334,8 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.06) 0 1px 2px;
 }
 
-.likes:hover, .comments:hover {
+.likes:hover,
+.comments:hover {
   background-color: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
@@ -359,5 +353,4 @@ nav {
   -webkit-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
 }
-
 /*# sourceMappingURL=style.css.map */
