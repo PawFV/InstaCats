@@ -139,7 +139,6 @@ nav {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border: 2px solid rgba(73, 73, 73, 0.335);
   width: 210px;
   height: 210px;
   border-radius: 100%;
@@ -151,7 +150,7 @@ nav {
   padding: 5px;
   width: 130px;
   height: 190px;
-  border: 1px solid rgba(73, 73, 73, 0.335);
+
   border-radius: 100%;
 }
 
@@ -234,13 +233,14 @@ nav {
   @extend .fig-profile-pic;
   height: 100px;
   width: 100px;
+  border: 1px solid rgba(73, 73, 73, 0.335);
   margin-right: 20px;
   align-self: center;
   cursor: pointer;
   img {
     @extend .profile-picture;
-    width: 95px;
-    height: 95px;
+    width: 94px;
+    height: 94px;
   }
   .friends-desc {
     position: absolute;
