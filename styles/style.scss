@@ -7,14 +7,14 @@
  */
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   -webkit-font-smoothing: subpixel-antialiased;
   background-color: #fafafa;
   color: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 auto;
 }
 
@@ -39,12 +39,12 @@ header {
   padding: 10px 0;
   background-color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px 0;
-          box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px 0;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
-  border-bottom: #F8F8F8;
+  border-bottom: #f8f8f8;
 }
 
 nav {
@@ -54,11 +54,11 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .search-bar {
@@ -113,8 +113,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .col-2 {
@@ -134,11 +134,11 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border: 2px solid rgba(73, 73, 73, 0.335);
   width: 210px;
   height: 210px;
@@ -167,7 +167,7 @@ nav {
   margin-left: 5px;
   color: white;
   font-weight: bold;
-  background-color: #0095F6;
+  background-color: #0095f6;
   font-size: 14px;
   text-decoration: none;
   padding: 5px 9px;
@@ -209,15 +209,15 @@ nav {
 .container-grid {
   display: -ms-grid;
   display: grid;
- 
-      grid-template-columns: repeat(3, minmax(auto, 293px));
 
-      grid-template-rows: repeat(3, minmax(auto, 293));
+  grid-template-columns: repeat(3, minmax(auto, 293px));
+
+  grid-template-rows: repeat(3, minmax(auto, 293));
   gap: 5px;
   height: auto;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .section-friends {
@@ -229,27 +229,25 @@ nav {
   display: flex;
 }
 
-.fig-profile-friend{
-  position:relative;
+.fig-profile-friend {
+  position: relative;
   @extend .fig-profile-pic;
   height: 100px;
-  width:100px;
-  margin-right:20px;
+  width: 100px;
+  margin-right: 20px;
   align-self: center;
-  img{
+  img {
     @extend .profile-picture;
-    width:95px;
-    height:95px;
-    
+    width: 95px;
+    height: 95px;
   }
-  .friends-desc{
-    position:absolute;
+  .friends-desc {
+    position: absolute;
     bottom: -39px;
     font-size: 14px;
     font-weight: bold;
   }
 }
-
 
 /* 
 ███████╗██████╗ ██╗███████╗███╗   ██╗██████╗ ███████╗
@@ -314,7 +312,7 @@ nav {
   transition: filter 0.2s;
   transition: filter 0.2s, -webkit-filter 0.2s;
   -webkit-filter: brightness(86%);
-          filter: brightness(86%);
+  filter: brightness(86%);
 }
 
 /* likes comments */
@@ -330,25 +328,26 @@ nav {
   border-radius: 4px;
   cursor: pointer;
   -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0 1px 2px;
-          box-shadow: rgba(0, 0, 0, 0.06) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 1px 2px;
 }
 
-.likes:hover, .comments:hover {
+.likes:hover,
+.comments:hover {
   background-color: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
   color: #111;
 }
 
 .likes {
   left: 35%;
   -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
 }
 
 .comments {
   right: 35%;
   -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
 }
 /*# sourceMappingURL=style.css.map */

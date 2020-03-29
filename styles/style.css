@@ -5,6 +5,7 @@
     CROP:       https://www.remove.bg/
     GRADIENT:   https://cssgradient.io/
  */
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -14,7 +15,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   background-color: #fafafa;
   color: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 auto;
 }
 
@@ -26,6 +27,7 @@ body {
 }
 
 /* Line */
+
 /* 
 ███╗   ██╗ █████╗ ██╗   ██╗
 ████╗  ██║██╔══██╗██║   ██║
@@ -35,6 +37,7 @@ body {
 ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  
                            
 */
+
 header {
   padding: 10px 0;
   background-color: white;
@@ -44,7 +47,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
-  border-bottom: #F8F8F8;
+  border-bottom: #f8f8f8;
 }
 
 nav {
@@ -97,6 +100,7 @@ nav {
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝╚══════╝
                                                      
 */
+
 .section-profile {
   padding-left: 5px;
   padding-top: 30px;
@@ -167,7 +171,7 @@ nav {
   margin-left: 5px;
   color: white;
   font-weight: bold;
-  background-color: #0095F6;
+  background-color: #0095f6;
   font-size: 14px;
   text-decoration: none;
   padding: 5px 9px;
@@ -194,11 +198,12 @@ nav {
   margin: 0 25px 20px 0;
 }
 
-.user-description > * {
+.user-description>* {
   margin: 0;
 }
 
 /*  */
+
 .grid-item {
   margin: 0;
   padding: 0;
@@ -210,9 +215,9 @@ nav {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(auto, 293px))[3];
-      grid-template-columns: repeat(3, minmax(auto, 293px));
+  grid-template-columns: repeat(3, minmax(auto, 293px));
   -ms-grid-rows: (minmax(auto, 293))[3];
-      grid-template-rows: repeat(3, minmax(auto, 293));
+  grid-template-rows: repeat(3, minmax(auto, 293));
   gap: 5px;
   height: auto;
   -webkit-box-pack: center;
@@ -235,8 +240,8 @@ nav {
   width: 100px;
   margin-right: 20px;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .fig-profile-friend img {
@@ -260,6 +265,7 @@ nav {
 ╚═╝     ╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝
                                                      
 */
+
 .line {
   max-width: 900px;
   margin: auto;
@@ -291,6 +297,7 @@ nav {
 }
 
 /* img gallery */
+
 .img-link {
   display: block;
   position: relative;
@@ -318,6 +325,7 @@ nav {
 }
 
 /* likes comments */
+
 .overlay {
   position: absolute;
   bottom: 12%;
@@ -351,4 +359,5 @@ nav {
   -webkit-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
 }
+
 /*# sourceMappingURL=style.css.map */
