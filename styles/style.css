@@ -379,6 +379,16 @@ nav {
             justify-content: center;
     padding-top: 0;
   }
+  .user-desc {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 20px;
+  }
   .section-friends {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -388,9 +398,9 @@ nav {
   }
   .col-1 {
     width: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .col-1 .fig-profile-pic, .col-1 .fig-profile-friend {
     margin-left: 50px;
@@ -407,21 +417,6 @@ nav {
   }
   header {
     padding: 3px 0;
-  }
-  .user-desc {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: auto;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-bottom: 20px;
-  }
-  .col-1 {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .search-bar {
     width: 90px;
