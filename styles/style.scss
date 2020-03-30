@@ -1,10 +1,10 @@
-@charset "UTF-8";
 /*  <-- UTILITIES -->
     IMG:        https://unsplash.com/ 
                 https://www.pexels.com/es-es/ 
     CROP:       https://www.remove.bg/
     GRADIENT:   https://cssgradient.io/
  */
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -46,7 +46,13 @@ header {
   z-index: 2;
   border-bottom: #f8f8f8;
 }
-
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  font-weight: 0;
+  user-select: none;
+  letter-spacing: -1.5px;
+}
 nav {
   max-width: 1200px;
   margin: auto;
@@ -59,10 +65,11 @@ nav {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0 7px;
 }
 
 .search-bar {
-  width: 200px;
+  width: 170px;
   height: 35px;
   padding: 10px;
   display: inline-block;
@@ -77,7 +84,6 @@ nav {
   margin: 0 5px;
   cursor: pointer;
 }
-
 .nav-icons i:hover {
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
@@ -220,7 +226,7 @@ nav {
 }
 
 .section-friends {
-  width: 900px;
+  max-width: 900px;
   margin: auto;
   height: 200px;
   display: -webkit-box;
@@ -351,4 +357,65 @@ nav {
   -webkit-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
 }
+
+@media only screen and (max-width: 768px) {
+  .container-grid {
+    grid-gap: 3px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-profile {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 0;
+  }
+  .section-friends {
+    justify-content: center;
+    transform: scale(0.9);
+  }
+  .col-1 {
+    width: 100%;
+    justify-content: flex-start;
+    .fig-profile-pic {
+      margin-left: 50px;
+      transform: scale(0.8);
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container-grid {
+    grid-gap: 6px;
+    grid-template-columns: 1fr;
+  }
+  header {
+    padding: 3px 0;
+  }
+  .user-desc {
+    width: fit-content;
+    margin: auto;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .col-1 {
+    justify-content: center;
+  }
+  .search-bar {
+    width: 90px;
+  }
+  nav > * {
+    transform: scale(0.8);
+  }
+}
+@media only screen and (max-width: 380px) {
+  div.logo {
+    transform: scale(0.8);
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+  .search-bar {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
