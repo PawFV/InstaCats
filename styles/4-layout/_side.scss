@@ -1,15 +1,15 @@
-.section-friends {
+.friends {
   max-width: 900px;
   margin: auto;
   height: 200px;
   display: flex;
-  .fig-profile-friend {
+  .friends__figure {
     @include circularImgContainer(100px, 100px);
     margin-right: 20px;
-    img {
+    .friends__img {
       @include circularImg(90px, 90px);
     }
-    .friends-desc {
+    .friends__description {
       position: absolute;
       bottom: -39px;
       font-size: 14px;

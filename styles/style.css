@@ -181,7 +181,7 @@ body .container {
   margin: 0;
 }
 
-.section-friends {
+.friends {
   max-width: 900px;
   margin: auto;
   height: 200px;
@@ -190,7 +190,7 @@ body .container {
   display: flex;
 }
 
-.section-friends .fig-profile-friend {
+.friends .friends__figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,7 +212,7 @@ body .container {
   margin-right: 20px;
 }
 
-.section-friends .fig-profile-friend img {
+.friends .friends__figure .friends__img {
   border: 1px solid rgba(73, 73, 73, 0.333);
   border-radius: 100%;
   -webkit-box-sizing: border-box;
@@ -222,7 +222,7 @@ body .container {
   width: 90px;
 }
 
-.section-friends .fig-profile-friend .friends-desc {
+.friends .friends__figure .friends__description {
   position: absolute;
   bottom: -39px;
   font-size: 14px;
