@@ -1,11 +1,4 @@
-.grid-item {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: relative;
-}
-
-.container-grid {
+.gallery {
   display: -ms-grid;
   display: grid;
 
@@ -14,35 +7,62 @@
   grid-template-rows: repeat(3, minmax(auto, 293));
   gap: 5px;
   height: auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+
   justify-content: center;
-}
 
-.img-link {
-  display: block;
-  position: relative;
-  height: 100%;
-}
+  .gallery__item {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: relative;
+  }
 
-.img-post {
-  width: 100%;
-  height: 100%;
-}
+  .gallery__img-link {
+    display: block;
+    position: relative;
+    height: 100%;
 
-.img-link:hover .overlay {
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-  opacity: 1;
-}
+    &:hover {
+      transition: filter 0.2s;
+      filter: brightness(86%);
 
-.img-link:hover {
-  transition: filter 0.2s;
-  filter: brightness(86%);
+      .gallery__overlay {
+        transition: opacity 0.5s;
+        opacity: 1;
+      }
+    }
+  }
+
+  .gallery__img-post {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gallery__likes {
+    left: 35%;
+    transform: translate(-50%, 50%);
+
+    &:hover {
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+      color: #111;
+    }
+  }
+
+  .gallery__comments {
+    right: 35%;
+    transform: translate(50%, 50%);
+
+    &:hover {
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+      color: #111;
+    }
+  }
 }
 
 /* likes comments */
-.overlay {
+.gallery__overlay {
   position: absolute;
   bottom: 12%;
   opacity: 0;
@@ -53,26 +73,5 @@
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0 1px 2px;
   box-shadow: rgba(0, 0, 0, 0.06) 0 1px 2px;
-}
-
-.likes:hover,
-.comments:hover {
-  background-color: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
-  color: #111;
-}
-
-.likes {
-  left: 35%;
-  -webkit-transform: translate(-50%, 50%);
-  transform: translate(-50%, 50%);
-}
-
-.comments {
-  right: 35%;
-  -webkit-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);
 }
