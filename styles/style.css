@@ -209,7 +209,7 @@ body .container {
   border-radius: 100%;
   border: 1px solid rgba(73, 73, 73, 0.333);
   cursor: pointer;
-  margin-right: 20px;
+  margin: 0 20px;
 }
 
 .friends .friends__figure .friends__img {
@@ -365,7 +365,7 @@ body .container {
         align-self: center;
     margin-bottom: 20px;
   }
-  .section-friends {
+  .friends {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

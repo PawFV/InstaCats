@@ -1,15 +1,10 @@
 .gallery {
-  display: -ms-grid;
   display: grid;
-
   grid-template-columns: repeat(3, minmax(auto, 293px));
-
   grid-template-rows: repeat(3, minmax(auto, 293));
   gap: 5px;
   height: auto;
-
   justify-content: center;
-
   .gallery__item {
     margin: 0;
     padding: 0;
@@ -21,11 +16,9 @@
     display: block;
     position: relative;
     height: 100%;
-
     &:hover {
       transition: filter 0.2s;
       filter: brightness(86%);
-
       .gallery__overlay {
         transition: opacity 0.5s;
         opacity: 1;
