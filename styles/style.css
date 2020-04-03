@@ -96,31 +96,17 @@ body .container {
   margin: auto;
 }
 
-.col-1 {
+.profile__col-1 {
   width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.col-2 {
-  width: 75%;
-}
-
-.profile-picture {
-  border: 1px solid rgba(73, 73, 73, 0.333);
-  border-radius: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  height: 200px;
-  width: 200px;
-}
-
-.fig-profile-pic {
+.profile__col-1 .profile__figure-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,31 +119,40 @@ body .container {
   -ms-flex-item-align: center;
       align-self: center;
   position: relative;
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
   margin: 0;
   border-radius: 100%;
   border: 1px solid rgba(73, 73, 73, 0.333);
   cursor: pointer;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
-.profile-picture img {
-  display: block;
-  padding: 5px;
-  width: 130px;
-  height: 190px;
+.profile__col-1 .profile__figure-container .profile__img {
+  border: 1px solid rgba(73, 73, 73, 0.333);
   border-radius: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  height: 190px;
+  width: 190px;
 }
 
-.following {
+.profile__col-2 {
+  width: 75%;
+}
+
+.profile__col-2 .profile__user-title {
   display: inline-block;
   text-decoration: none;
-  vertical-align: baseline;
-  margin-top: -15px;
+  display: inline;
+  font-style: normal;
+  font-weight: lighter;
 }
 
-.following a {
-  display: block;
+.profile__col-2 .user__following-button {
+  display: inline-block;
   margin-left: 5px;
   color: white;
   font-weight: bold;
@@ -168,27 +163,21 @@ body .container {
   border-radius: 7px;
 }
 
-.user-title {
-  display: inline;
-  font-style: normal;
-  font-weight: lighter;
-}
-
-.user-desc {
-  margin-bottom: 20px;
-}
-
-.follows {
+.profile__col-2 .profile__followers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.follows p {
-  margin: 0 25px 20px 0;
+.profile__col-2 .profile__followers p {
+  margin-right: 30px;
 }
 
-.user-description > * {
+.profile__col-2 .profile__description {
+  margin-bottom: 20px;
+}
+
+.profile__col-2 .profile__description > * {
   margin: 0;
 }
 
@@ -360,7 +349,7 @@ body .container {
             justify-content: center;
     padding-top: 0;
   }
-  .user-desc {
+  .profile__user {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -377,16 +366,16 @@ body .container {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .col-1 {
+  .profile__col-1 {
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .col-1 .fig-profile-pic {
+  .profile__col-1 .profile__figure-container {
     margin-left: 50px;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 

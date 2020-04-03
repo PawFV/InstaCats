@@ -8,7 +8,7 @@
     justify-content: center;
     padding-top: 0;
   }
-  .user-desc {
+  .profile__user {
     width: fit-content;
     margin: auto;
     align-self: center;
@@ -18,12 +18,12 @@
     justify-content: center;
     transform: scale(0.9);
   }
-  .col-1 {
+  .profile__col-1 {
     width: 100%;
     justify-content: center;
-    .fig-profile-pic {
+    .profile__figure-container {
       margin-left: 50px;
-      transform: scale(0.8);
+      transform: scale(0.9);
     }
   }
 }
