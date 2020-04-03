@@ -1,0 +1,83 @@
+.section-profile {
+  padding-left: 5px;
+  padding-top: 30px;
+  max-width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.col-1 {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.col-2 {
+  width: 75%;
+}
+
+.profile-picture {
+  @include circularImg(200px, 200px);
+}
+
+.fig-profile-pic {
+  @include circularImgContainer(210px, 210px);
+}
+
+.profile-picture img {
+  display: block;
+  padding: 5px;
+  width: 130px;
+  height: 190px;
+
+  border-radius: 100%;
+}
+
+.following {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: baseline;
+  margin-top: -15px;
+}
+
+.following a {
+  display: block;
+  margin-left: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #0095f6;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 9px;
+  border-radius: 7px;
+}
+
+.user-title {
+  display: inline;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.user-desc {
+  margin-bottom: 20px;
+}
+
+.follows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.follows p {
+  margin: 0 25px 20px 0;
+}
+
+.user-description > * {
+  margin: 0;
+}

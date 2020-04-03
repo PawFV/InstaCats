@@ -1,0 +1,56 @@
+@media only screen and (max-width: 768px) {
+  .container-grid {
+    grid-gap: 3px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-profile {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 0;
+  }
+  .user-desc {
+    width: fit-content;
+    margin: auto;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .section-friends {
+    justify-content: center;
+    transform: scale(0.9);
+  }
+  .col-1 {
+    width: 100%;
+    justify-content: center;
+    .fig-profile-pic {
+      margin-left: 50px;
+      transform: scale(0.8);
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container-grid {
+    grid-gap: 6px;
+    grid-template-columns: 1fr;
+  }
+  .header {
+    padding: 3px 0;
+  }
+
+  .nav__search-bar {
+    width: 40px;
+  }
+  .nav > * {
+    transform: scale(0.8);
+  }
+}
+@media only screen and (max-width: 380px) {
+  .nav__logo {
+    transform: scale(0.8);
+  }
+  .nav {
+    justify-content: space-between;
+  }
+  .nav__search-bar {
+    display: none;
+  }
+}

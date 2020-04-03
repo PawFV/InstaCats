@@ -1,0 +1,78 @@
+.grid-item {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: relative;
+}
+
+.container-grid {
+  display: -ms-grid;
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(auto, 293px));
+
+  grid-template-rows: repeat(3, minmax(auto, 293));
+  gap: 5px;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.img-link {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.img-post {
+  width: 100%;
+  height: 100%;
+}
+
+.img-link:hover .overlay {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.img-link:hover {
+  transition: filter 0.2s;
+  filter: brightness(86%);
+}
+
+/* likes comments */
+.overlay {
+  position: absolute;
+  bottom: 12%;
+  opacity: 0;
+  font-size: 16px;
+  padding: 5px;
+  color: #767676;
+  background-color: rgba(255, 255, 255, 0.74);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 1px 2px;
+}
+
+.likes:hover,
+.comments:hover {
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+  color: #111;
+}
+
+.likes {
+  left: 35%;
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+
+.comments {
+  right: 35%;
+  -webkit-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+}

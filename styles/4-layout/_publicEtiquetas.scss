@@ -1,0 +1,22 @@
+.pubs-eti {
+    text-align: center;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+.pubs-eti span {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+    padding-top: 10px;
+    margin-top: -1px;
+}
+
+.tag-active {
+    color: black;
+    border-top: 1px solid black;
+}
+
+.not-active {
+    color: rgba(31, 31, 31, 0.664);
+}

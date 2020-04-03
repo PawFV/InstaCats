@@ -1,0 +1,19 @@
+.section-friends {
+  max-width: 900px;
+  margin: auto;
+  height: 200px;
+  display: flex;
+  .fig-profile-friend {
+    @include circularImgContainer(100px, 100px);
+    margin-right: 20px;
+    img {
+      @include circularImg(90px, 90px);
+    }
+    .friends-desc {
+      position: absolute;
+      bottom: -39px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}

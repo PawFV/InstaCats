@@ -1,0 +1,42 @@
+.header {
+  padding: 10px 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: #f8f8f8;
+  .nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7px;
+    &__logo {
+      font-family: "Pacifico", cursive;
+      font-size: 30px;
+      font-weight: 0;
+      user-select: none;
+      letter-spacing: -1.5px;
+    }
+    &__search-bar {
+      display: inline-block;
+      width: 170px;
+      height: 35px;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      transition: 0.5s;
+      outline: none;
+    }
+    &__icons-icon {
+      margin: 0 5px;
+      cursor: pointer;
+      &:hover {
+        transition: color 0.2s;
+        color: rgba(47, 47, 47, 0.746);
+      }
+    }
+  }
+}
