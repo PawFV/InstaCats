@@ -348,6 +348,27 @@ body .container {
   color: rgba(31, 31, 31, 0.664);
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f1f1f186;
+  color: rgba(0, 0, 0, 0.733);
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.footer__cr-logo {
+  color: black;
+}
+
+.footer__authors-logo {
+  color: red;
+}
+
 @media only screen and (max-width: 768px) {
   .gallery {
     grid-gap: 3px;
@@ -407,6 +428,20 @@ body .container {
   .nav > * {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+  }
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.8em;
+    padding-top: 5px;
+  }
+  .footer div {
+    text-align: center;
+  }
+  .footer div p {
+    margin: 5px 0;
   }
 }
 

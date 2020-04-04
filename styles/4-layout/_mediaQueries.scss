@@ -42,6 +42,17 @@
   .nav > * {
     transform: scale(0.8);
   }
+  .footer {
+    flex-direction: column;
+    font-size: 0.8em;
+    padding-top: 5px;
+    & div {
+      text-align: center;
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 380px) {
   .nav__logo {

@@ -1,0 +1,17 @@
+.footer {
+    @include flexNavLogo;
+    background-color: #f1f1f186;
+    color: $tpBlack;
+    padding: 0 20px;
+    font-weight: bold;
+    &__cr {
+        &-logo {
+            color: black;
+        }
+    }
+    &__authors {
+        &-logo {
+            color: red;
+        }
+    }
+}
