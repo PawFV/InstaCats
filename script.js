@@ -47,6 +47,10 @@ function showLikes(ev) {
     menuProfile.classList.remove("toggle-menu");
   }
 }
+if (etiPub.classList.value == "tag-active") {
+  etiPub.classList.value = "not-active";
+  pubEti.classList.value = "tag-active";
+}
 
 function showMenu(ev) {
   console.log(ev);
