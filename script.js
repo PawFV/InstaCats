@@ -3,7 +3,6 @@ function swt(id1, id2) {
     var pubEti = document.getElementById(id2)
     console.log(etiPub.classList.value);
 
-
     if (etiPub.classList.value == "tag-active") {
         etiPub.classList.value = "not-active"
         pubEti.classList.value = "tag-active"

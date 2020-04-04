@@ -10,6 +10,9 @@
     padding: 0;
     height: 100%;
     display: relative;
+    :hover {
+      cursor: pointer;
+    }
   }
 
   .gallery__img-link {
