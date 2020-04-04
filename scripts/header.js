@@ -33,7 +33,7 @@ function showLikes(ev) {
 
 function showMenu(ev) {
   console.log(ev);
-
+  debugger
   menuProfile.classList.toggle("toggle-menu");
   if (menuLikes.classList.contains("toggle-menu")) {
     menuLikes.classList.remove("toggle-menu");

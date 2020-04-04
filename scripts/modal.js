@@ -11,13 +11,12 @@ function loadImageOnClickEvents() {
     for (var i = 0; i < images.length; i++) {
 
         images[i].addEventListener('click', e => {
-            // Al clickear sobre una imagen asignamos el valor su atributo 'data-img' para saber su INDEX
+            // Al clickear sobre una imagen asignamos el valor de su atributo 'data-img' para saber su INDEX
             // total: 9 imagenes -> index 1-9
             const clickedImgId = e.toElement.getAttribute('data-img')
             addModalBackGround()
             //Pasamos número de index por param
             openModalImg(clickedImgId)
-
         });
     }
 }
@@ -57,13 +56,13 @@ function openModalImg(clickedImgId) {
     imgModal.classList.add('modal__img-container--active')
     //Asignamos animación
     imgModal.classList.add('scaleup')
+    debugger
     //quitamos animación
     setTimeout(() => {
         imgModal.classList.remove('scaleup')
     }, 600);
     //Guardamos el valor del index del modal actual
     currentImgId = clickedImgId;
-    debugger
 }
 //Eventos para los iconos de flechas para hacer Slide
 leftArrow.addEventListener('click', slideLeft)
