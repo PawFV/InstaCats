@@ -61,6 +61,13 @@ body .container {
       -ms-user-select: none;
           user-select: none;
   letter-spacing: -1.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .nav__logo .nav__title {
+  margin: 0;
 }
 
 .header .nav__search-bar {
