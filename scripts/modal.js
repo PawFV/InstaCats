@@ -1,4 +1,4 @@
-const images = document.getElementsByClassName('gallery__img-link') //Array de elementos con cada imagen de galería
+const images = document.getElementsByClassName('gallery__img-post') //Array de elementos con cada imagen de galería
 const modalImages = document.querySelectorAll(`div[data-imgm]`) //Array de elementos con cada imagen de la galería del modal
 const modalBg = document.getElementById('modal') // Modal Background
 const leftArrow = document.getElementById('left-arrow-modal') //Botón derecha modal slide
@@ -32,6 +32,8 @@ function loadModalOnClickImagesEvents() {
 // Asignamos clase al fondo del modal para hacerlo visible
 function addModalBackGround() {
     modalBg.classList.add('modal--active')
+    leftArrow.classList.add('modal__left--active')
+    rightArrow.classList.add('modal__right--active')
 }
 
 // Evento para cerrar al hacer click el background del modal
@@ -45,46 +47,49 @@ function close(e) {
     if (e == 'modal') {
         modalBg.classList.remove('modal--active')
         imgModal.classList.remove('modal__img-container--active')
+        leftArrow.classList.remove('modal__left--active')
+        rightArrow.classList.remove('modal__right--active')
     }
 }
 
 function openModalImg(clickedImgId) {
-    //Asignamos el id que coincide con la imagen
+    //Asignamos el id que coincide con la imagen y lo hacemos visible 
     imgModal = document.querySelector(`div[data-imgm='${clickedImgId}']`)
-    //Lo hacemos visible 
     imgModal.classList.add('modal__img-container--active')
-    //Asignamos animación
-    imgModal.classList.add('scaleup')
-    //quitamos animación
-    setTimeout(() => {
-        imgModal.classList.remove('scaleup')
-    }, 600);
+    addAnimationsToModalElements()
     //Guardamos el valor del index del modal actual
     currentImgId = clickedImgId;
 }
 
+function addAnimationsToModalElements() {
+    // Asignamos y quitamos animación
+    imgModal.classList.add('scaleup')
+    setTimeout(() => {
+        imgModal.classList.remove('scaleup')
+    }, 600);
+}
 //Eventos para los iconos de flechas para hacer Slide
 leftArrow.addEventListener('click', slideLeft)
 rightArrow.addEventListener('click', slideRight)
 
 function slideRight() {
-    //Verificamos qué index es
+    // Verificamos qué index es
     reviewCountRight()
-    //Removemos la imagen anterior y sumamos index
+    // Removemos la imagen anterior y sumamos index
     imgModal.classList.remove('modal__img-container--active')
     currentImgId++
-    //Asignamos el index a la nueva imagen y la clase --active.
+    // Asignamos el index a la nueva imagen y la clase --active.
     imgModal = document.querySelector(`div[data-imgm='${currentImgId}']`)
     imgModal.classList.add('modal__img-container--active')
 }
 
 function slideLeft() {
-    //Verificamos qué index es
+    // Verificamos qué index es
     reviewCountLeft()
     imgModal.classList.remove('modal__img-container--active')
-    //Removemos la imagen anterior y sumamos index
+    // Removemos la imagen anterior y sumamos index
     currentImgId--
-    //Asignamos el index a la nueva imagen y la clase --active.
+    // Asignamos el index a la nueva imagen y la clase --active.
     imgModal = document.querySelector(`div[data-imgm='${currentImgId}']`)
     imgModal.classList.add('modal__img-container--active')
 }

@@ -33,12 +33,18 @@
         z-index: 10;
         transform: translateY(-50%);
         color: rgba(255, 255, 255, 0.664);
-
+        visibility: hidden;
+        opacity: 0;
         &:hover {
-            transition: background-color 0.7s, color 0.3s;
+            transition: background-color 1s, color 0.5s;
             background-color: rgba(0, 0, 0, 0.555);
             cursor: pointer;
             color: white;
+        }
+        &--active {
+            visibility: visible;
+            transition: opacity 3s 0.2s;
+            opacity: 1;
         }
     }
     .modal__left {
@@ -53,6 +59,7 @@
 .modal--active {
     visibility: visible;
 }
+
 .scaleup {
     animation: scale01 0.5s 1 forwards;
 }
