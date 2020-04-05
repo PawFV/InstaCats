@@ -96,7 +96,7 @@ function slideLeft() {
 
 function reviewCountRight() {
     //Si es el 9 (max) debemos volver al inicio.
-    if (currentImgId == 9) {
+    if (currentImgId == images.length) {
         // Asignamos 0 ya que la función suma 1 genéricamente
         currentImgId = 0
     }
@@ -105,7 +105,7 @@ function reviewCountLeft() {
     //Si es el 1 (min) debemos ir al final.
     if (currentImgId == 1) {
         // Asignamos 0 ya que la función resta 1 genéricamente
-        currentImgId = 10
+        currentImgId = (images.length + 1)
     }
 }
 

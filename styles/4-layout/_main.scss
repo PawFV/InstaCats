@@ -7,7 +7,7 @@
   justify-content: center;
   .gallery__item {
     margin: 0;
-    padding: 0;
+
     height: 100%;
     display: relative;
     :hover {
@@ -38,6 +38,10 @@
     left: 35%;
     transform: translate(-50%, 50%);
 
+    i {
+      padding: 7px;
+      user-select: none;
+    }
     &:hover {
       background-color: #fff;
       box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
@@ -48,7 +52,10 @@
   .gallery__comments {
     right: 35%;
     transform: translate(50%, 50%);
-
+    i {
+      padding: 7px;
+      user-select: none;
+    }
     &:hover {
       background-color: #fff;
       box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
@@ -63,7 +70,6 @@
   bottom: 12%;
   opacity: 0;
   font-size: 16px;
-  padding: 5px;
   color: #767676;
   background-color: rgba(255, 255, 255, 0.74);
   border: 1px solid transparent;
