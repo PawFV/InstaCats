@@ -11,9 +11,13 @@
         visibility: hidden;
         transform: translate(-50%, -50%);
         animation-fill-mode: forwards;
-        width: 800px;
+        width: 768px;
         height: 600px;
-        background-color: red;
+        background-color: rgba(0, 0, 0, 0.76);
+
+        &--active {
+            visibility: visible;
+        }
         :hover {
             cursor: pointer;
         }
@@ -23,9 +27,7 @@
             height: 100%;
         }
     }
-    .modal__img-container--active {
-        visibility: visible;
-    }
+
     .modal__left,
     .modal__right {
         position: absolute;
@@ -33,11 +35,13 @@
         z-index: 10;
         transform: translateY(-50%);
         color: rgba(255, 255, 255, 0.664);
+        background-color: rgba(0, 0, 0, 0.325);
         visibility: hidden;
         opacity: 0;
+
         &:hover {
             transition: background-color 1s, color 0.5s;
-            background-color: rgba(0, 0, 0, 0.555);
+            background-color: rgba(0, 0, 0, 0.705);
             cursor: pointer;
             color: white;
         }
@@ -48,12 +52,16 @@
         }
     }
     .modal__left {
-        left: calc(50% - 400px);
+        left: calc(50% - 384px);
         padding: 8px 10px 10px 5px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
     }
     .modal__right {
-        right: calc(50% - 400px);
+        right: calc(50% - 384px);
         padding: 8px 5px 10px 10px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
     }
 }
 .modal--active {

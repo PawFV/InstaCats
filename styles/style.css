@@ -215,9 +215,13 @@ body .container {
           transform: translate(-50%, -50%);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  width: 800px;
+  width: 768px;
   height: 600px;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+.modal__img-container--active {
+  visibility: visible;
 }
 
 .modal__img-container :hover {
@@ -230,10 +234,6 @@ body .container {
   height: 100%;
 }
 
-.modal .modal__img-container--active {
-  visibility: visible;
-}
-
 .modal .modal__left,
 .modal .modal__right {
   position: absolute;
@@ -242,6 +242,7 @@ body .container {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.664);
+  background-color: rgba(0, 0, 0, 0.325);
   visibility: hidden;
   opacity: 0;
 }
@@ -250,7 +251,7 @@ body .container {
 .modal .modal__right:hover {
   -webkit-transition: background-color 1s, color 0.5s;
   transition: background-color 1s, color 0.5s;
-  background-color: rgba(0, 0, 0, 0.555);
+  background-color: rgba(0, 0, 0, 0.705);
   cursor: pointer;
   color: white;
 }
@@ -264,13 +265,17 @@ body .container {
 }
 
 .modal .modal__left {
-  left: calc(50% - 400px);
+  left: calc(50% - 384px);
   padding: 8px 10px 10px 5px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .modal .modal__right {
-  right: calc(50% - 400px);
+  right: calc(50% - 384px);
   padding: 8px 5px 10px 10px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 .modal--active {
@@ -677,6 +682,25 @@ body .container {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
+  .modal__img-container {
+    width: 100%;
+    height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal__img-container .modal__img {
+    height: auto;
+  }
+  .modal .modal__left {
+    left: 0;
+  }
+  .modal .modal__right {
+    right: 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -709,6 +733,13 @@ body .container {
   .footer div p {
     margin: 5px 0;
   }
+  .modal__img-container .modal__img {
+    height: 65%;
+  }
+  .modal .modal__left,
+  .modal .modal__right {
+    font-size: 2.5em;
+  }
 }
 
 @media only screen and (max-width: 380px) {
@@ -723,6 +754,12 @@ body .container {
   }
   .nav__search-bar {
     display: none;
+  }
+  .modal__img-container {
+    height: 60%;
+  }
+  .modal__img-container .modal__img {
+    height: 75%;
   }
 }
 /*# sourceMappingURL=style.css.map */
