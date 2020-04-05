@@ -26,6 +26,9 @@
       transform: scale(0.9);
     }
   }
+
+  
+
 }
 @media only screen and (max-width: 480px) {
   .gallery {
@@ -34,14 +37,34 @@
   }
   .header {
     padding: 3px 0;
+    .nav__responsive--menu{
+      display: inline-block;
+      font-size: 30px;
+        }
+ 
+        .nav__search-bar {
+          width: 40px;
+        }
   }
 
-  .nav__search-bar {
-    width: 40px;
-  }
+
+
+
+ 
   .nav > * {
     transform: scale(0.8);
+    margin-bottom: 5px;
   }
+  
+  
+ 
+  
+  .nav__icons{
+    display:none;
+  }
+      .modal-header{
+        top:11%;
+      }
   .footer {
     flex-direction: column;
     font-size: 0.8em;
@@ -53,6 +76,8 @@
       }
     }
   }
+
+
 }
 @media only screen and (max-width: 380px) {
   .nav__logo {

@@ -13,14 +13,12 @@
   }
   to {
     width: 25%;
-    // box-shadow: 0px -1px 6px 2px darkgray;
   }
 }
 
 @keyframes nav-animation-remove {
   from {
     width: 25%;
-    // box-shadow: 0px -1px 6px 2px darkgray;
   }
   to {
     width: 20%;
@@ -28,15 +26,16 @@
 }
 
 .nav__icons__menu-profile {
+  z-index: 6;
+
   position: absolute;
-  right: 0;
-  top: 110%;
+  right: -5%;
+  top: 163%;
   display: none;
   min-width: 220px;
   height: 20vh;
-  //   background-color: #d2eef1;
   background-color: #f1f1f1;
-  box-shadow: -1px 0px 6px 2px rgba(84, 75, 84, 1);
+  box-shadow: -1px 0px 2px 0px rgba(84, 75, 84, 1);
 
   border-radius: 2%;
   &__ul {
@@ -59,16 +58,15 @@
 }
 
 .nav__icons__menu-likes {
+  z-index: 6;
   position: absolute;
-  right: 30%;
-  top: 110%;
+  right: 20%;
+  top: 163%;
   display: none;
   min-width: 220px;
   height: 20vh;
-  //   background-color: #d2eef1;
   background-color: #f1f1f1;
-  box-shadow: -1px 0px 6px 2px rgba(84, 75, 84, 1);
-
+  box-shadow: -1px 0px 2px 0px rgba(84, 75, 84, 1);
   border-radius: 2%;
   &__ul {
     display: flex;
@@ -94,4 +92,8 @@
 }
 .modal-header {
   @include modalMX;
+visibility: visible;
+position: fixed;
+height: 100%;
 }
+
