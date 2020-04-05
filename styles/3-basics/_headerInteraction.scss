@@ -1,42 +1,28 @@
 .nav__search-bar--active {
-  animation: nav-animation 2s 1 0s linear;
+  animation: nav-animation 0.5s 1 0s;
   animation-fill-mode: forwards;
 }
 
 .nav__search-bar--remove {
-  animation: nav-animation-remove 2s 1 0s linear;
+  animation: nav-animation-remove 0.5s 1 0s;
   animation-fill-mode: forwards;
 }
 @keyframes nav-animation {
-  0% {
-    transform: rotate(xx);
+  from {
     width: 20%;
   }
-  17% {
-    transform: rotate(xx);
-    width: 35%;
-    box-shadow: 0px -1px 6px 2px darkgray;
-  }
-  100% {
-    transform: rotate(xx);
-    width: 35%;
-    box-shadow: 0px -1px 6px 2px darkgray;
+  to {
+    width: 25%;
+    // box-shadow: 0px -1px 6px 2px darkgray;
   }
 }
 
 @keyframes nav-animation-remove {
-  0% {
-    transform: rotate(xx);
-    width: 35%;
-    box-shadow: 0px -1px 6px 2px darkgray;
+  from {
+    width: 25%;
+    // box-shadow: 0px -1px 6px 2px darkgray;
   }
-  17% {
-    transform: rotate(xx);
-    width: 20%;
-    box-shadow: 0px -1px 6px 2px darkgray;
-  }
-  100% {
-    transform: rotate(xx);
+  to {
     width: 20%;
   }
 }
@@ -105,4 +91,7 @@
 
 .toggle-menu {
   display: inline-block;
+}
+.modal-header {
+  @include modalMX;
 }

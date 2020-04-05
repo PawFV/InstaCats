@@ -28,13 +28,14 @@
 
     &__search-bar {
       display: inline-block;
-      width: 170px;
+      width: 20%;
       height: 35px;
       padding: 10px;
       border-radius: 3px;
       border: 1px solid #ccc;
       transition: 0.5s;
       outline: none;
+      background-color: $f1;
     }
     &__icons {
       position: relative;

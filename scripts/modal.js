@@ -9,18 +9,18 @@ let currentImgId, imgModal;
 // cargamos todas las imagenes de galería con Event 'click'
 function loadImageOnClickEvents() {
     for (var i = 0; i < images.length; i++) {
-
         images[i].addEventListener('click', e => {
             // Al clickear sobre una imagen asignamos el valor de su atributo 'data-img' para saber su INDEX
             // total: 9 imagenes -> index 1-9
             const clickedImgId = e.toElement.getAttribute('data-img')
             addModalBackGround()
-            //Pasamos número de index por param
+            // Pasamos número de index por param
             openModalImg(clickedImgId)
         });
     }
 }
-//Cargamos eventos onclick en las imágenes del modal para hacer slide hacia la derecha 
+
+// Cargamos eventos onclick en las imágenes del modal para hacer slide hacia la derecha 
 function loadModalOnClickImagesEvents() {
     for (var i = 0; i < modalImages.length; i++) {
         modalImages[i].addEventListener('click', e => {
@@ -29,7 +29,6 @@ function loadModalOnClickImagesEvents() {
     }
 }
 
-
 // Asignamos clase al fondo del modal para hacerlo visible
 function addModalBackGround() {
     modalBg.classList.add('modal--active')
@@ -37,7 +36,7 @@ function addModalBackGround() {
 
 // Evento para cerrar al hacer click el background del modal
 modalBg.addEventListener('click', (e) => {
-    //enviamos el id del elemento clickeado
+    // Enviamos el id del elemento clickeado
     close(e.toElement.id)
 })
 
@@ -56,7 +55,6 @@ function openModalImg(clickedImgId) {
     imgModal.classList.add('modal__img-container--active')
     //Asignamos animación
     imgModal.classList.add('scaleup')
-    debugger
     //quitamos animación
     setTimeout(() => {
         imgModal.classList.remove('scaleup')
@@ -64,6 +62,7 @@ function openModalImg(clickedImgId) {
     //Guardamos el valor del index del modal actual
     currentImgId = clickedImgId;
 }
+
 //Eventos para los iconos de flechas para hacer Slide
 leftArrow.addEventListener('click', slideLeft)
 rightArrow.addEventListener('click', slideRight)
@@ -77,7 +76,6 @@ function slideRight() {
     //Asignamos el index a la nueva imagen y la clase --active.
     imgModal = document.querySelector(`div[data-imgm='${currentImgId}']`)
     imgModal.classList.add('modal__img-container--active')
-
 }
 
 function slideLeft() {
@@ -90,6 +88,7 @@ function slideLeft() {
     imgModal = document.querySelector(`div[data-imgm='${currentImgId}']`)
     imgModal.classList.add('modal__img-container--active')
 }
+
 function reviewCountRight() {
     //Si es el 9 (max) debemos volver al inicio.
     if (currentImgId == 9) {
