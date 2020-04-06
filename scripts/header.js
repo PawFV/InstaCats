@@ -1,9 +1,11 @@
-var searchBar = document.getElementById("searchBarHeader");
-var likesButton = document.getElementById("userLikes");
-var userButton = document.getElementById("userLogo");
-var menuLikes = document.getElementById("likesMenu");
-var menuProfile = document.getElementById("profileMenu"); //modal
-var modalBgProfile = document.getElementById("modalHeader")
+const searchBar = document.getElementById("searchBarHeader");
+const likesButton = document.getElementById("userLikes");
+const userButton = document.getElementById("userLogo");
+const menuLikes = document.getElementById("likesMenu");
+const menuProfile = document.getElementById("profileMenu"); //modal
+const modalBgProfile = document.getElementById("modalHeader");
+const iconResponsive = document.getElementById("responsiveIcon")
+const menuResponsive = document.getElementById("responsiveMenu")
 
 // Animación search bar
 searchBar.addEventListener("focus", showSearchBar);
@@ -12,6 +14,8 @@ searchBar.addEventListener("blur", quitAnimationSearchBar);
 likesButton.addEventListener("click", showLikes);
 userButton.addEventListener("click", showMenu);
 modalBgProfile.addEventListener("click", removeModalAndMenu)
+iconResponsive.addEventListener("click", showResponsiveMenu)
+
 //Animación de la barra de navegación
 function showSearchBar(ev) {
   if (!searchBar.classList.contains("nav__search-bar--active ")) {
@@ -22,36 +26,49 @@ function showSearchBar(ev) {
 
 function quitAnimationSearchBar(ev) {
   searchBar.classList.add("nav__search-bar--remove");
+  searchBar.classList.remove("nav__search-bar--active");
+
 }
 
-//Muestra los menús.. de likes y de las preferencias usuario
+//Muestra los menús de likes, de las preferencias usuario y versiones móviles
 function showLikes(ev) {
 
-  menuLikes.classList.toggle("toggle-menu");
+  menuLikes.classList.toggle("nav__toggle-menu");
 
   showModal(modalBgProfile)
 
-  if (menuProfile.classList.contains("toggle-menu")) {
-    menuProfile.classList.remove("toggle-menu");
+  if (menuProfile.classList.contains("nav__toggle-menu")) {
+    menuProfile.classList.remove("nav__toggle-menu");
     modalBgProfile.classList.add("modal-header")
   }
-
-
-
 }
 
 function showMenu(ev) {
-  menuProfile.classList.toggle("toggle-menu");
+  menuProfile.classList.toggle("nav__toggle-menu");
+
 
   showModal(modalBgProfile)
 
-  if (menuLikes.classList.contains("toggle-menu")) {
-    menuLikes.classList.remove("toggle-menu");
+  if (menuLikes.classList.contains("nav__toggle-menu")) {
+    menuLikes.classList.remove("nav__toggle-menu");
     modalBgProfile.classList.add("modal-header")
 
   }
 }
 
+function showResponsiveMenu(ev) {
+
+  menuResponsive.classList.toggle("nav__toggle-menu-responsive");
+
+  showModal(modalBgProfile)
+
+
+
+
+}
+
+
+// Modal que acompaña a los menús
 function showModal(modal) {
   if (!modal.classList.contains("modal-header")) {
     modal.classList.add("modal-header")
@@ -62,8 +79,9 @@ function showModal(modal) {
 }
 
 function removeModalAndMenu(ev) {
-  menuLikes.classList.remove("toggle-menu")
-  menuProfile.classList.remove("toggle-menu")
+  menuLikes.classList.remove("nav__toggle-menu")
+  menuProfile.classList.remove("nav__toggle-menu")
+  menuResponsive.classList.remove("nav__toggle-menu-responsive");
   modalBgProfile.classList.remove("modal-header")
 
 }

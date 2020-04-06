@@ -8,6 +8,7 @@
   border-bottom: #f8f8f8;
   .nav {
     max-width: 1200px;
+    z-index: 10;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -29,6 +30,7 @@
     &__responsive--menu {
      display: none;
       color:black;
+      position: relative;
     }
 
     &__search-bar {

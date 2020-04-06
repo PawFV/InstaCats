@@ -8,6 +8,12 @@
     justify-content: center;
     padding-top: 0;
   }
+
+  .nav__icons__menu {
+    right: -5%;
+
+  }
+
   .profile__user {
     width: fit-content;
     margin: auto;
@@ -30,6 +36,8 @@
   
 
 }
+
+
 @media only screen and (max-width: 480px) {
   .gallery {
     grid-gap: 6px;
@@ -41,11 +49,22 @@
       display: inline-block;
       font-size: 30px;
         }
- 
-        .nav__search-bar {
-          width: 40px;
-        }
+ .nav{
+justify-content: space-evenly;
+  padding: 0;
+   .nav__search-bar {
+     width:35%;
+     animation: none;
+    }
   }
+
+  .nav__icons__menu {
+    &__resp{
+      right: -5%;
+    }
+  }
+
+}
 
 
 
@@ -79,6 +98,19 @@
 
 
 }
+
+@media only screen and (max-width: 425px) {
+.nav{
+
+  .nav__icons__menu {
+    &__resp{
+      right: -7%;
+    }
+  }
+
+}
+}
+
 @media only screen and (max-width: 380px) {
   .nav__logo {
     transform: scale(0.8);
@@ -89,4 +121,22 @@
   .nav__search-bar {
     display: none;
   }
+  
+
 }
+
+
+@media only screen and (max-width: 320px) {
+ 
+  .nav{
+
+    .nav__icons__menu {
+      &__resp{
+        right: -8%;
+      }
+    }
+  
+  }
+
+}
+
