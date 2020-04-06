@@ -1,19 +1,23 @@
 .nav__icons__menu {
   z-index: 6;
-  right: -30%;
   position: absolute;
-  top: 163%;
+  top:62px;
+  right: 1px;
   display: none;
   min-width: 240px;
-  height: 20vh;
+  height: 140px;
   background-color: white;
   box-shadow: -1px 0px 2px 0px rgba(84, 75, 84, 1);
   
   border-radius: 2%;
   
+
+
   &__resp{
-    top:50%;
-    height: 60vh;
+    top:100%;
+    right: 1px;
+    height: 250px; 
+
   }
   
   &__ul {
@@ -61,7 +65,7 @@
 
 .nav__toggle-menu {
 display: inline-block;  
-animation: menuAnimationLoad 0.5s 1 0s ease;
+animation: menuAnimationLoad 0.2s 1 0s ease;
 overflow: hidden;
 
 }
@@ -70,7 +74,7 @@ overflow: hidden;
 .nav__toggle-menu-responsive{
   display: inline-block;  
   overflow: hidden;
-  animation: responsiveMenu 0.5s 1 0s ease;
+  animation: responsiveMenu 0.2s 1 0s ease;
 
   
   }
@@ -80,6 +84,7 @@ overflow: hidden;
   position: fixed;
   height: 100%;
   overflow: hidden;
+  opacity: 0;
 
 }
 
@@ -110,7 +115,7 @@ overflow: hidden;
     height: 0px;
     }
 100%{
-    height: 20vh;
+    height: 140px;
     }
 }
 
@@ -120,7 +125,7 @@ overflow: hidden;
     height: 0px;
     }
 100%{
-    height: 60vh;
+    height: 250px;
     
 }
 }

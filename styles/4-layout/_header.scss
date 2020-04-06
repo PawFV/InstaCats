@@ -7,6 +7,8 @@
   z-index: 10;
   border-bottom: #f8f8f8;
   .nav {
+    position: relative;
+    height: 100%;
     max-width: 1200px;
     z-index: 10;
     margin: auto;
@@ -30,7 +32,6 @@
     &__responsive--menu {
      display: none;
       color:black;
-      position: relative;
     }
 
     &__search-bar {
@@ -44,9 +45,7 @@
       outline: none;
       background-color: $f1;
     }
-    &__icons {
-      position: relative;
-    }
+   
     &__icons-icon {
       margin: 0 5px;
       cursor: pointer;
