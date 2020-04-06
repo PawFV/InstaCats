@@ -4,10 +4,11 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px 0;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   border-bottom: #f8f8f8;
   .nav {
     max-width: 1200px;
+    z-index: 10;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -24,6 +25,12 @@
       .nav__title {
         margin: 0;
       }
+    }
+
+    &__responsive--menu {
+     display: none;
+      color:black;
+      position: relative;
     }
 
     &__search-bar {

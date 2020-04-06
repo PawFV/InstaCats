@@ -1,3 +1,54 @@
+.nav__icons__menu {
+  z-index: 6;
+  right: -30%;
+  position: absolute;
+  top: 163%;
+  display: none;
+  min-width: 240px;
+  height: 20vh;
+  background-color: white;
+  box-shadow: -1px 0px 2px 0px rgba(84, 75, 84, 1);
+  
+  border-radius: 2%;
+  
+  &__resp{
+    top:50%;
+    height: 60vh;
+  }
+  
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+    &__li {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 100%;
+      padding: 5px;
+      
+      cursor: pointer;
+      &:hover{
+       background-color: lightskyblue; 
+      }
+    }
+
+  }
+  }
+
+
+
+
 .nav__search-bar--active {
   animation: nav-animation 0.5s 1 0s;
   animation-fill-mode: forwards;
@@ -7,91 +58,70 @@
   animation: nav-animation-remove 0.5s 1 0s;
   animation-fill-mode: forwards;
 }
+
+.nav__toggle-menu {
+display: inline-block;  
+animation: menuAnimationLoad 0.5s 1 0s ease;
+overflow: hidden;
+
+}
+
+
+.nav__toggle-menu-responsive{
+  display: inline-block;  
+  overflow: hidden;
+  animation: responsiveMenu 0.5s 1 0s ease;
+
+  
+  }
+.modal-header {
+  @include modalMX;
+  visibility: visible;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+
+
 @keyframes nav-animation {
   from {
     width: 20%;
   }
   to {
     width: 25%;
-    // box-shadow: 0px -1px 6px 2px darkgray;
   }
 }
 
 @keyframes nav-animation-remove {
   from {
     width: 25%;
-    // box-shadow: 0px -1px 6px 2px darkgray;
   }
   to {
     width: 20%;
   }
 }
 
-.nav__icons__menu-profile {
-  position: absolute;
-  right: 0;
-  top: 110%;
-  display: none;
-  min-width: 220px;
-  height: 20vh;
-  //   background-color: #d2eef1;
-  background-color: #f1f1f1;
-  box-shadow: -1px 0px 6px 2px rgba(84, 75, 84, 1);
 
-  border-radius: 2%;
-  &__ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 90%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 
-    &__li {
-      text-decoration: none;
-      display: inline-block;
-      font-size: 100%;
-      cursor: pointer;
+@keyframes menuAnimationLoad{
+  0%{
+    height: 0px;
     }
-  }
-}
-
-.nav__icons__menu-likes {
-  position: absolute;
-  right: 30%;
-  top: 110%;
-  display: none;
-  min-width: 220px;
-  height: 20vh;
-  //   background-color: #d2eef1;
-  background-color: #f1f1f1;
-  box-shadow: -1px 0px 6px 2px rgba(84, 75, 84, 1);
-
-  border-radius: 2%;
-  &__ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 90%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    &__li {
-      text-decoration: none;
-      display: inline-block;
-      font-size: 100%;
-      cursor: pointer;
+100%{
+    height: 20vh;
     }
-  }
 }
 
-.toggle-menu {
-  display: inline-block;
+
+@keyframes responsiveMenu{
+  0%{
+    height: 0px;
+    }
+100%{
+    height: 60vh;
+    
 }
-.modal-header {
-  @include modalMX;
 }
+
