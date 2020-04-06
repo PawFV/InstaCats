@@ -27,12 +27,12 @@ body .container {
 
 .nav__icons__menu {
   z-index: 6;
-  right: -30%;
   position: absolute;
-  top: 163%;
+  top: 72px;
+  right: 1px;
   display: none;
   min-width: 240px;
-  height: 20vh;
+  height: 140px;
   background-color: white;
   -webkit-box-shadow: -1px 0px 2px 0px #544b54;
           box-shadow: -1px 0px 2px 0px #544b54;
@@ -40,8 +40,9 @@ body .container {
 }
 
 .nav__icons__menu__resp {
-  top: 50%;
-  height: 60vh;
+  top: 100%;
+  right: 1px;
+  height: 250px;
 }
 
 .nav__icons__menu__ul {
@@ -103,16 +104,16 @@ body .container {
 
 .nav__toggle-menu {
   display: inline-block;
-  -webkit-animation: menuAnimationLoad 0.5s 1 0s ease;
-          animation: menuAnimationLoad 0.5s 1 0s ease;
+  -webkit-animation: menuAnimationLoad 0.2s 1 0s ease;
+          animation: menuAnimationLoad 0.2s 1 0s ease;
   overflow: hidden;
 }
 
 .nav__toggle-menu-responsive {
   display: inline-block;
   overflow: hidden;
-  -webkit-animation: responsiveMenu 0.5s 1 0s ease;
-          animation: responsiveMenu 0.5s 1 0s ease;
+  -webkit-animation: responsiveMenu 0.2s 1 0s ease;
+          animation: responsiveMenu 0.2s 1 0s ease;
 }
 
 .modal-header {
@@ -129,6 +130,7 @@ body .container {
   position: fixed;
   height: 100%;
   overflow: hidden;
+  opacity: 0;
 }
 
 @-webkit-keyframes nav-animation {
@@ -172,7 +174,7 @@ body .container {
     height: 0px;
   }
   100% {
-    height: 20vh;
+    height: 140px;
   }
 }
 
@@ -181,7 +183,7 @@ body .container {
     height: 0px;
   }
   100% {
-    height: 20vh;
+    height: 140px;
   }
 }
 
@@ -190,7 +192,7 @@ body .container {
     height: 0px;
   }
   100% {
-    height: 60vh;
+    height: 250px;
   }
 }
 
@@ -199,7 +201,7 @@ body .container {
     height: 0px;
   }
   100% {
-    height: 60vh;
+    height: 250px;
   }
 }
 
@@ -332,6 +334,7 @@ body .container {
 }
 
 .header .nav {
+  height: 100%;
   max-width: 1200px;
   z-index: 10;
   margin: auto;
@@ -368,7 +371,6 @@ body .container {
 .header .nav__responsive--menu {
   display: none;
   color: black;
-  position: relative;
 }
 
 .header .nav__search-bar {
@@ -382,10 +384,6 @@ body .container {
   transition: 0.5s;
   outline: none;
   background-color: #f1f1f1;
-}
-
-.header .nav__icons {
-  position: relative;
 }
 
 .header .nav__icons-icon {
@@ -707,9 +705,6 @@ body .container {
             justify-content: center;
     padding-top: 0;
   }
-  .nav__icons__menu {
-    right: -5%;
-  }
   .profile__user {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -766,7 +761,8 @@ body .container {
         grid-template-columns: 1fr;
   }
   .header {
-    padding: 3px 0;
+    padding: 0;
+    min-width: 340px;
   }
   .header .nav__responsive--menu {
     display: inline-block;
@@ -783,9 +779,6 @@ body .container {
     -webkit-animation: none;
             animation: none;
   }
-  .header .nav__icons__menu__resp {
-    right: -5%;
-  }
   .nav > * {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
@@ -793,9 +786,6 @@ body .container {
   }
   .nav__icons {
     display: none;
-  }
-  .modal-header {
-    top: 11%;
   }
   .footer {
     -webkit-box-orient: vertical;
@@ -820,12 +810,6 @@ body .container {
   }
 }
 
-@media only screen and (max-width: 425px) {
-  .nav .nav__icons__menu__resp {
-    right: -7%;
-  }
-}
-
 @media only screen and (max-width: 380px) {
   .nav__logo {
     -webkit-transform: scale(0.8);
@@ -844,12 +828,6 @@ body .container {
   }
   .modal__img-container .modal__img {
     height: 75%;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .nav .nav__icons__menu__resp {
-    right: -8%;
   }
 }
 /*# sourceMappingURL=style.css.map */

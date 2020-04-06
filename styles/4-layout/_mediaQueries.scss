@@ -9,10 +9,7 @@
     padding-top: 0;
   }
 
-  .nav__icons__menu {
-    right: -5%;
-
-  }
+  
 
   .profile__user {
     width: fit-content;
@@ -58,7 +55,8 @@
     grid-template-columns: 1fr;
   }
   .header {
-    padding: 3px 0;
+    padding: 0;
+    min-width: 340px;
     .nav__responsive--menu{
       display: inline-block;
       font-size: 30px;
@@ -72,32 +70,17 @@ justify-content: space-evenly;
     }
   }
 
-  .nav__icons__menu {
-    &__resp{
-      right: -5%;
-    }
-  }
-
 }
 
-
-
-
- 
   .nav > * {
     transform: scale(0.8);
     margin-bottom: 5px;
   }
-  
-  
- 
-  
+    
   .nav__icons{
     display:none;
   }
-      .modal-header{
-        top:11%;
-      }
+      
   .footer {
     flex-direction: column;
     font-size: 0.8em;
@@ -109,7 +92,6 @@ justify-content: space-evenly;
       }
     }
   }
-<<<<<<< HEAD
   .modal__img-container {
     .modal__img {
       height: 65%;
@@ -121,23 +103,10 @@ justify-content: space-evenly;
       font-size: 2.5em;
     }
   }
-=======
 
 
 }
 
-@media only screen and (max-width: 425px) {
-.nav{
-
-  .nav__icons__menu {
-    &__resp{
-      right: -7%;
-    }
-  }
-
-}
->>>>>>> header
-}
 
 @media only screen and (max-width: 380px) {
   .nav__logo {
@@ -149,31 +118,15 @@ justify-content: space-evenly;
   .nav__search-bar {
     display: none;
   }
-<<<<<<< HEAD
   .modal__img-container {
     height: 60%;
     .modal__img {
       height: 75%;
     }
   }
-=======
   
 
->>>>>>> header
 }
 
 
-@media only screen and (max-width: 320px) {
- 
-  .nav{
-
-    .nav__icons__menu {
-      &__resp{
-        right: -8%;
-      }
-    }
-  
-  }
-
-}
 
