@@ -28,7 +28,7 @@ body .container {
 .nav__icons__menu {
   z-index: 6;
   position: absolute;
-  top: 72px;
+  top: 62px;
   right: 1px;
   display: none;
   min-width: 240px;
@@ -334,6 +334,7 @@ body .container {
 }
 
 .header .nav {
+  position: relative;
   height: 100%;
   max-width: 1200px;
   z-index: 10;
